@@ -1,3 +1,6 @@
+import { SignUpService } from './signup/signup.service';
+import { HomeRoutingModule } from './home.routing.module';
+import { HomeComponent } from './home.component';
 import { SignUpComponent } from './signup/signup.component';
 import { SignInComponent } from './signin/signin.component';
 import { NgModule } from "@angular/core";
@@ -10,7 +13,8 @@ import { RouterModule } from '@angular/router';
   declarations:
   [
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    HomeComponent
   ],
   imports:
   [
@@ -18,7 +22,11 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     CommonModule,
     VMessageModule,
-    RouterModule
+    RouterModule,
+    HomeRoutingModule
+  ],
+  providers: [
+    SignUpService
   ]
 })
 
